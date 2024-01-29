@@ -15,8 +15,7 @@ export default async function About() {
             <section className="grid lg:grid-cols-2 grid-cols-1 gap-x-6 justify-items-center">
               <div className="order-2 lg:order-none">
                 <h1 className="lg:text-5xl text-4xl lg:leading-tight basis-1/2 font-bold mb-8">
-                  I&apos;m {data.fullName}. I live in {data.location}, where I
-                  design the future.
+                  I&apos;m {data.fullName}. I live in {data.location}.
                 </h1>
 
                 <div className="flex flex-col gap-y-3 text-zinc-400 leading-relaxed">
@@ -25,7 +24,7 @@ export default async function About() {
               </div>
 
               <div className="flex flex-col lg:justify-self-center justify-self-start gap-y-8 lg:order-1 order-none mb-12">
-                <div>
+                <div className="sticky top-4">
                   <Image
                     className="rounded-2xl mb-4 object-cover max-h-96 min-h-96 bg-top bg-[#1d1d20]"
                     src={data.profileImage.image}
@@ -36,14 +35,13 @@ export default async function About() {
                   />
 
                   <a
-                    href={`${data.resumeURL}?dl=${data.fullName}_resume`}
+                    href={`${data.resumeURL}?dl=${data.fullName}_resume.pdf`}
+                    target="_blank"
                     className="flex items-center justify-center gap-x-2 bg-[#1d1d20] border border-transparent hover:border-zinc-700 rounded-md duration-200 py-2 text-center cursor-cell font-medium"
                   >
                     <BiFile className="text-base" /> Download Resumé
                   </a>
-                </div>
-
-                <ul>
+                  <ul className="mt-4">
                   <li>
                     <a
                       href={`mailto:${data.email}`}
@@ -54,6 +52,9 @@ export default async function About() {
                     </a>
                   </li>
                 </ul>
+                </div>
+
+
               </div>
             </section>
 

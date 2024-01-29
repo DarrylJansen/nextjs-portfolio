@@ -34,7 +34,15 @@ export default async function Project({ params }: Props) {
   return (
     <main className="max-w-6xl mx-auto lg:px-16 px-8">
       <div className="max-w-3xl mx-auto">
-        <div className="flex items-start justify-between mb-4">
+      <a
+            href="./"
+            rel="noreferrer noopener"
+            className="bg-[#1d1d20] text-white hover:border-zinc-700 border border-transparent rounded-md px-4 py-2"
+          >
+            &lt; All Projects
+          </a>
+        <div className="flex items-center justify-between my-5">
+
           <h1 className="font-bold lg:text-5xl text-3xl lg:leading-tight mb-4">
             {project.name}
           </h1>
